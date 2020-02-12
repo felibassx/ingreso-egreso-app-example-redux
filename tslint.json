@@ -86,7 +86,7 @@
         "use-pipe-transform-interface": true,
         "no-trailing-whitespace": false,
         "variable-name": false,
-        "object-literal-shorthand": false;
+        "object-literal-shorthand": false
     },
     "rulesDirectory": [
         "codelyzer"
