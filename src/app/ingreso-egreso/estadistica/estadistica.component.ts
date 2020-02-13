@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/app.reducer';
 import { Subscription } from 'rxjs';
 import { IngresoEgreso } from '../ingreso-egreso.model';
 
-import { MultiDataSet, Label } from 'ng2-charts';
+import { Label } from 'ng2-charts';
 import { ActivarLoadingAction, DesactivarLoadingAction } from '../../shared/ui.actions';
+import { AppStateIngresoEgreso } from '../ingreso-egreso.reducer';
 
 @Component({
   selector: 'app-estadistica',
@@ -30,7 +30,7 @@ export class EstadisticaComponent implements OnInit, OnDestroy {
 
   subscription: Subscription = new Subscription();
 
-  constructor( private store: Store<AppState> ) { }
+  constructor( private store: Store<AppStateIngresoEgreso> ) { }
 
   ngOnInit() {
     
